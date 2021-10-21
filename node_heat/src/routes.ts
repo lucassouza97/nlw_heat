@@ -7,8 +7,26 @@ import { ensureAuthenticate } from './middleware/ensureAuthenticated'
 
 const router = Router()
 
+/**
+ * @swagger
+ * /authenticate
+ *   post:
+ *     description: Welcome to swagger-jsdoc!
+ *     responses:
+ *       200:
+ *         description: Returns a mysterious string.
+ */
 router.post('/authenticate', new AuthenticateUserController().handle)
 
+/**
+ * @swagger
+ * /messages
+ *   post:
+ *     description: Welcome to swagger-jsdoc!
+ *     responses:
+ *       200:
+ *         description: Returns a mysterious string.
+ */
 router.post(
 	'/messages',
 	ensureAuthenticate,

@@ -25,6 +25,8 @@ class CreateMessageService {
 
 		io.emit('new_message', infoWS)
 
+		console.log(`new message, \"${infoWS.text}\" by user ${infoWS.user.name}`)
+
 		return message
 	}
 }
